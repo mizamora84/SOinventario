@@ -1,6 +1,6 @@
 name: image-postgres
 
-on:push
+on: push
 
 jobs:
   push_to_registry:
