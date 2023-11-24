@@ -1,8 +1,6 @@
 name: image-postgres
 
-on:
-  release:
-    types: [published]
+on:push
 
 jobs:
   push_to_registry:
