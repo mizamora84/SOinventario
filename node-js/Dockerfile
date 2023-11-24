@@ -1,8 +1,16 @@
-# Dockerfile para el contenedor con Node.js
-FROM node:latest
-WORKDIR /app
-COPY package.json ./
-RUN npm install
-COPY . .
+#Specify a base image
+FROM node:alpine
+
+#Specify a working directory
+WORKDIR /usr/app
+
+#Copy the project
+COPY ./nodejs ./
+
+#Install dependencies
+RUN npm install 
+
 EXPOSE 3000
-CMD ["npm", "start"]
+
+#Default command
+CMD ["npm","start"]
