@@ -5,7 +5,8 @@ FROM node:alpine
 WORKDIR /usr/app
 
 #Copy the project
-COPY ./nodejs ./
+# Copiar el directorio nodejs al directorio de trabajo /app en el contenedor
+COPY ./nodejs /app
 
 #Install dependencies
 RUN npm install 
